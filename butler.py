@@ -43,6 +43,11 @@ def get_license_description(license_code):
     sys.exit()
 
 
+def get_license_summary(license_code):
+  """ Gets the license summary and permitted, forbidden and required behavouir """
+  pass
+
+
 def main():
   """ butler helps you manage and add license from the command line """
 	arguments = docopt(__doc__, version=__version__)
