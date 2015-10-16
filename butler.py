@@ -5,7 +5,7 @@ import click
 
 import requests
 
-BASE_URL = "https://api.github.com/licenses"
+BASE_URL = "https://api.github.com"
 _HEADERS = {'Accept': 'application/vnd.github.drax-preview+json'}
 
 
@@ -45,7 +45,7 @@ def get_license_description(license_code):
 
 def get_license_summary(license_code):
   """ Gets the license summary and permitted, forbidden and required behavouir """
-  pass
+  
 
 
 def main():
