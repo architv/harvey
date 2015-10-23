@@ -45,6 +45,7 @@ def get_license_description(license_code):
 
 def get_license_summary(license_code):
   """ Gets the license summary and permitted, forbidden and required behavouir """
+  pass
   
 
 
