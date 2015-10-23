@@ -35,7 +35,7 @@ def get_license_description(license_code):
   req = requests.get("{base_url}/licenses/{license_code}".format(base_url=BASE_URL, 
     license_code=license_code)
 
-  if req.status_code = requests.status.ok:
+  if req.status_code == requests.status.ok:
     print req.json()["body"]
   else:
     click.secho("Couldn't get the data", fg="red", bold=True)
