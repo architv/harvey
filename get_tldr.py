@@ -31,7 +31,7 @@ def get_rules(license):
   req = requests.get("{base_url}/licenses/{license}".format(base_url=BASE_URL, license=license), 
     headers=_HEADERS)
 
-  if req.status_code == 200:
+  if req.status_code == requests.codes.ok:
     data = req.json()
     can = data["permitted"]
     cannot = data["forbidden"]
@@ -49,7 +49,7 @@ def main():
 
     req = requests.get(RESOURCES[license])
 
-    if req.status_code == 200:
+    if req.status_code == requests.codes.ok:
       summary = get_summary(req.text)
       can, cannot, must = get_rules(license)
 
