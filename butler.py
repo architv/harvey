@@ -1,8 +1,6 @@
 import os
 import sys
 
-# import click
-
 import requests
 
 BASE_URL = "https://api.github.com"
