@@ -1,10 +1,16 @@
+import json
 import os
+import re
 import sys
 
 import requests
 
 BASE_URL = "https://api.github.com"
 _HEADERS = {'Accept': 'application/vnd.github.drax-preview+json'}
+_LICENCES = {}
+
+with open('licenses.json', 'r') as f:
+  _LICENCES = json.loads(f.read())
 
 
 def get_licences():
@@ -34,7 +40,20 @@ def get_license_description(license_code):
     license_code=license_code), headers=_HEADERS)
 
   if req.status_code == requests.codes.ok:
-    print req.json()["body"]
+    s = req.json()["body"]
+    search_curly = re.search(r'\{(.*)\}', s)
+    search_square = re.search(r'\[(.*)\]', s)
+    matches = ""
+
+    if search_curly:
+      matches = re.sub(r'\{(.+)\}', '2015 Archit Verma', s)
+    elif search_square:
+      matches = re.sub(r'\[(.+)\]', '2015 Archit Verma', s)
+
+    return matches
+
+
+    print matches
   else:
     # click.secho("Couldn't get the data", fg="red", bold=True)
     # click.secho("Exiting...", fg="red", bold=True)
@@ -57,7 +76,8 @@ def main():
  #      print(_handle_gitignores(arguments['NAME']))
  #  else:
  #      print(__doc__)
-  get_license_description("apache-2.0")
+  for license in _LICENCES.keys():
+    get_license_description(license)
   
 
 if __name__ == '__main__':
