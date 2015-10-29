@@ -1,4 +1,4 @@
 Butler
 =====
 
-Butler is your command line helper for choosing licenses
+Butler is your command line helper for viewing and choosing licenses
