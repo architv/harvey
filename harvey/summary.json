@@ -1,0 +1,279 @@
+{
+    "apache-2.0": {
+        "source": "https://tldrlegal.com/l/apache2", 
+        "must": [
+            "include-copyright", 
+            "document-changes"
+        ], 
+        "cannot": [
+            "trademark-use", 
+            "no-liability"
+        ], 
+        "can": [
+            "commercial-use", 
+            "modifications", 
+            "distribution", 
+            "sublicense", 
+            "patent-grant", 
+            "private-use"
+        ], 
+        "summary": "You can do what you like with the software, as long as you include the required notices.  This permissive license contains a patent license from the contributors of the code."
+    }, 
+    "lgpl-3.0": {
+        "source": "https://tldrlegal.com/l/lgpl-3.0", 
+        "must": [
+            "include-copyright", 
+            "library-usage", 
+            "disclose-source"
+        ], 
+        "cannot": [
+            "no-liability"
+        ], 
+        "can": [
+            "commercial-use", 
+            "modifications", 
+            "distribution", 
+            "sublicense", 
+            "patent-grant", 
+            "private-use"
+        ], 
+        "summary": "This license is mainly applied to libraries.  You may copy, distribute and modify the software provided that modifications are described and licensed for free under LGPL. Derivatives works (including modifications or anything statically linked to the library) can only be redistributed under LGPL, but applications that use the library don't have to be."
+    }, 
+    "gpl-2.0": {
+        "source": "https://tldrlegal.com/l/gpl2", 
+        "must": [
+            "include-copyright", 
+            "document-changes", 
+            "disclose-source"
+        ], 
+        "cannot": [
+            "no-liability", 
+            "no-sublicense"
+        ], 
+        "can": [
+            "commercial-use", 
+            "modifications", 
+            "distribution", 
+            "patent-grant", 
+            "private-use"
+        ], 
+        "summary": "You may copy, distribute and modify the software as long as you track changes/dates in source files. Any modifications to or software including (via compiler) GPL-licensed code must also be made available under the GPL along with build & install instructions."
+    }, 
+    "mpl-2.0": {
+        "source": "https://tldrlegal.com/l/mpl-2.0", 
+        "must": [
+            "disclose-source", 
+            "include-copyright"
+        ], 
+        "cannot": [
+            "no-liability", 
+            "trademark-use"
+        ], 
+        "can": [
+            "commercial-use", 
+            "modifications", 
+            "distribution", 
+            "sublicense", 
+            "patent-grant", 
+            "private-use"
+        ], 
+        "summary": "MPL is a copyleft license that is easy to comply with.  You must make the source code for any of your changes available under MPL, but you can combine the MPL software with proprietary code, as long as you keep the MPL code in a separate file.  Version 2.0 is compatible with GPL version 3.  You can distribute binaries under a proprietary license, as long as you make the source available under MPL."
+    }, 
+    "gpl-3.0": {
+        "source": "https://tldrlegal.com/l/gpl-3.0", 
+        "must": [
+            "include-copyright", 
+            "document-changes", 
+            "disclose-source"
+        ], 
+        "cannot": [
+            "no-liability", 
+            "no-sublicense"
+        ], 
+        "can": [
+            "commercial-use", 
+            "modifications", 
+            "distribution", 
+            "patent-grant", 
+            "private-use"
+        ], 
+        "summary": "You may copy, distribute and modify the software as long as you track changes/dates in source files. Any modifications to or software including (via compiler) GPL-licensed code must also be made available under the GPL along with build & install instructions."
+    }, 
+    "unlicense": {
+        "source": "https://tldrlegal.com/license/unlicense", 
+        "must": [], 
+        "cannot": [
+            "no-liability"
+        ], 
+        "can": [
+            "private-use", 
+            "commercial-use", 
+            "modifications", 
+            "distribution", 
+            "sublicense"
+        ], 
+        "summary": "Releases code into the public domain, thereby releasing all rights you may hold to that code."
+    }, 
+    "cc0-1.0": {
+        "source": "https://tldrlegal.com/l/cc0-1.0", 
+        "must": [], 
+        "cannot": [
+            "no-liability"
+        ], 
+        "can": [
+            "commercial-use", 
+            "modifications", 
+            "distribution", 
+            "private-use"
+        ], 
+        "summary": "Releases software into the public domain, or otherwise grants permission to use it for any purpose. Disclaims patent licenses."
+    }, 
+    "artistic-2.0": {
+        "source": "https://tldrlegal.com/l/artistic", 
+        "must": [
+            "include-copyright", 
+            "document-changes"
+        ], 
+        "cannot": [
+            "no-liability", 
+            "trademark-use"
+        ], 
+        "can": [
+            "commercial-use", 
+            "modifications", 
+            "distribution", 
+            "sublicense", 
+            "private-use"
+        ], 
+        "summary": "This is a license for software packages with the intent of giving the original copyright holder some measure of control over his software while still remaining open source. It is flexible and allows you to distribute or sell modified versions as long as you fulfill one of various conditions. Look at section 4 in the full text for a better explanation."
+    }, 
+    "agpl-3.0": {
+        "source": "https://tldrlegal.com/l/agpl3", 
+        "must": [
+            "include-copyright", 
+            "document-changes", 
+            "disclose-source", 
+            "network-use-disclose"
+        ], 
+        "cannot": [
+            "no-liability", 
+            "no-sublicense"
+        ], 
+        "can": [
+            "commercial-use", 
+            "modifications", 
+            "distribution", 
+            "patent-grant", 
+            "private-use"
+        ], 
+        "summary": "The AGPL license differs from the other GNU licenses in that it was built for network software. You can distribute modified versions if you keep track of the changes and the date you made them. As per usual with GNU licenses, you must license derivatives under AGPL. It provides the same restrictions and freedoms as the GPLv3 but with an additional clause which makes it so that source code must be distributed along with web publication. Since web sites and services are never distributed in the traditional sense, the AGPL is the GPL of the web."
+    }, 
+    "isc": {
+        "source": "https://tldrlegal.com/l/isc", 
+        "must": [
+            "include-copyright"
+        ], 
+        "cannot": [
+            "no-liability"
+        ], 
+        "can": [
+            "commercial-use", 
+            "distribution", 
+            "modifications", 
+            "private-use", 
+            "sublicense"
+        ], 
+        "summary": "A short, permissive software license. Basically, you can do whatever you want as long as you include the original copyright.\u00a0"
+    }, 
+    "lgpl-2.1": {
+        "source": "https://tldrlegal.com/l/lgpl2", 
+        "must": [
+            "include-copyright", 
+            "library-usage", 
+            "disclose-source"
+        ], 
+        "cannot": [
+            "no-liability"
+        ], 
+        "can": [
+            "commercial-use", 
+            "modifications", 
+            "distribution", 
+            "sublicense", 
+            "patent-grant", 
+            "private-use"
+        ], 
+        "summary": "This license mainly applies to libraries. You may copy, distribute and modify the software provided that you state modifications and license them under LGPL-2.1. Anything statically linked to the library can only be redistributed under LGPL, but applications that use the library don't have to be. \u00a0You must allow reverse engineering of your application as necessary to debug and relink the library."
+    }, 
+    "epl-1.0": {
+        "source": "https://tldrlegal.com/l/epl", 
+        "must": [
+            "disclose-source", 
+            "include-copyright"
+        ], 
+        "cannot": [
+            "no-liability"
+        ], 
+        "can": [
+            "commercial-use", 
+            "distribution", 
+            "modifications", 
+            "sublicense", 
+            "patent-grant", 
+            "private-use"
+        ], 
+        "summary": "This license, made and used by the Eclipse Foundation, is similar to GPL but allows you to link code under the license to proprietary applications. You may also license binaries under a proprietary license, as long as the source code is available under EPL."
+    }, 
+    "bsd-3-clause": {
+        "source": "https://tldrlegal.com/l/bsd3", 
+        "must": [
+            "include-copyright"
+        ], 
+        "cannot": [
+            "no-liability", 
+            "trademark-use"
+        ], 
+        "can": [
+            "commercial-use", 
+            "modifications", 
+            "distribution", 
+            "sublicense", 
+            "private-use"
+        ], 
+        "summary": "The BSD 3-clause license allows you almost unlimited freedom with the software so long as you include the BSD copyright and license notice in it (found in Fulltext).\u00a0"
+    }, 
+    "bsd-2-clause": {
+        "source": "https://tldrlegal.com/l/freebsd", 
+        "must": [
+            "include-copyright"
+        ], 
+        "cannot": [
+            "no-liability"
+        ], 
+        "can": [
+            "commercial-use", 
+            "modifications", 
+            "distribution", 
+            "sublicense", 
+            "private-use"
+        ], 
+        "summary": "The BSD 2-clause license allows you almost unlimited freedom with the software so long as you include the BSD copyright notice in it (found in Fulltext). Many other licenses are influenced by this one."
+    }, 
+    "mit": {
+        "source": "https://tldrlegal.com/l/mit", 
+        "must": [
+            "include-copyright"
+        ], 
+        "cannot": [
+            "no-liability"
+        ], 
+        "can": [
+            "commercial-use", 
+            "modifications", 
+            "distribution", 
+            "sublicense", 
+            "private-use"
+        ], 
+        "summary": "A short, permissive software license. Basically, you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source. \u00a0There are many variations of this license in use."
+    }
+}
