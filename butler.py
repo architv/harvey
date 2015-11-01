@@ -2,8 +2,8 @@ r"""
 butler generates license  from the command line for you
 Usage:
   butler (ls | list)
-  butler [(-tldr NAME)]
-  butler [NAME...]
+  butler <NAME> --tldr
+  butler <NAME>
   butler (-h | --help)
   butler --version
 Options:
@@ -11,13 +11,18 @@ Options:
   --version     Show version.
 """
 
+
 import json
 import os
 import re
 import sys
+from datetime import date
 
 import requests
+from colorama import Fore, Back, Style
 from docopt import docopt
+
+requests.packages.urllib3.disable_warnings()
 
 __version__ = '0.0.1'
 
@@ -36,7 +41,7 @@ def _get_licences():
     licenses = json.loads(f.read())
   
     for license in licenses:
-      print "{license_name} [{license_code}]".format(license_name=licenses[license], license_code=license)
+      print("{license_name} [{license_code}]").format(license_name=licenses[license], license_code=license)
 
 
 def _get_license_description(license_code):
@@ -48,45 +53,80 @@ def _get_license_description(license_code):
     s = req.json()["body"]
     search_curly = re.search(r'\{(.*)\}', s)
     search_square = re.search(r'\[(.*)\]', s)
-    matches = ""
+    license = ""
+    replace_string = '{year} {name}'.format(year=date.today().year, name='Archit Verma')
 
-    # if search_curly:
-    #   matches = re.sub(r'\{(.+)\}', '2015 Archit Verma', s)
-    # elif search_square:
-    #   matches = re.sub(r'\[(.+)\]', '2015 Archit Verma', s)
+    if search_curly:
+      license = re.sub(r'\{(.+)\}', replace_string, s)
+    elif search_square:
+      license = re.sub(r'\[(.+)\]', replace_string, s)
+    else:
+      license = s
 
-    # return matches
-
-
-    # print matches
+    return license
   else:
-    # click.secho("Couldn't get the data", fg="red", bold=True)
-    # click.secho("Exiting...", fg="red", bold=True)
-    sys.exit()
+    print(Fore.RED + 'No such license. Please check again.'), 
+    print(Style.RESET_ALL),
 
 
 def get_license_summary(license_code):
   """ Gets the license summary and permitted, forbidden and required behavouir """
-  with open('summary.json', 'r') as f:
-    summary_license = json.loads(f.read())[license_code]
- 
+  try:
+    with open('summary.json', 'r') as f:
+      summary_license = json.loads(f.read())[license_code]
+    
+    # prints summary
+    print(Fore.YELLOW + 'SUMMARY')
+    print(Style.RESET_ALL),
+    print(summary_license['summary'])
+
+    # prints source for summary
+    print(Style.BRIGHT + 'Source:'),
+    print(Style.RESET_ALL),
+    print(Fore.BLUE + summary_license['source'])
+    print(Style.RESET_ALL)
+
+    # prints cans
+    print(Fore.GREEN + 'CAN')
+    print(Style.RESET_ALL),
+    for rule in summary_license['can']:
+      print(rule)
+    print('')
+
+    # prints cannot
+    print(Fore.RED + 'CANNOT')
+    print(Style.RESET_ALL),
+    for rule in summary_license['cannot']:
+      print(rule)
+    print('')
+
+    # prints must
+    print(Fore.BLUE + 'MUST')
+    print(Style.RESET_ALL),
+    for rule in summary_license['must']:
+      print(rule)
+    print('')
+
+  except KeyError:
+    print(Fore.RED + 'No such license. Please check again.'), 
+    print(Style.RESET_ALL),
+
 
 def main():
   ''' butler helps you manage and add license from the command line '''
 	
   # for license in _LICENCES.keys():
-  #   get_license_description(license)
+  #   _get_license_description(license)
 
   arguments = docopt(__doc__, version=__version__)
-
   if arguments['ls'] or arguments['list']:
     _get_licences()
-  elif arguments['-tldr'] and arguments['NAME']:
-    get_license_summary(arguments['NAME'])
-  elif arguments['NAME']:
-      print(_get_license_description(arguments['NAME']))
+  elif arguments['--tldr'] and arguments['<NAME>']:
+    get_license_summary(arguments['<NAME>'])
+  elif arguments['<NAME>']:
+    print(_get_license_description(arguments['<NAME>']))
   else:
-      print(__doc__)
+    print(__doc__)
   
 
 if __name__ == '__main__':
