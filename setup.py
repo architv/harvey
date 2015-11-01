@@ -13,8 +13,8 @@ setup(
     keywords=['license', 'legal', 'github', 'command line', 'cli'],
     url='https://github.com/architv/harvey',
     install_requires=[
-        'docopt>=0.6.1',
-        "requests==2.7.0",
+        'docopt>=0.6.2',
+        "requests==2.8.0",
         "colorama==0.3.3"
     ],
     entry_points={
