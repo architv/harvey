@@ -115,7 +115,7 @@ def get_license_summary(license_code):
       print(rule)
     print('')
 
-    # prints must
+    # prints musts
     print(Fore.BLUE + 'MUST')
     print(Style.RESET_ALL),
     for rule in summary_license['must']:
