@@ -15,6 +15,7 @@ Options:
 import json
 import os
 import re
+import subprocess
 import sys
 from datetime import date
 
@@ -32,6 +33,20 @@ _LICENCES = {}
 
 with open('licenses.json', 'r') as f:
   _LICENCES = json.loads(f.read())
+
+
+def _stripslashes(s):
+  '''removes trailing and leading backslashes from string'''
+  r = re.sub(r"\\(n|r)", "\n", s)
+  r = re.sub(r"\\", "", r)
+  return r
+
+
+def _get_config_name():
+  '''Get git config user name'''
+  p = subprocess.Popen('git config --get user.name', shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+  output = p.stdout.readlines()
+  return _stripslashes(output[0])
 
 
 def _get_licences():
@@ -54,7 +69,7 @@ def _get_license_description(license_code):
     search_curly = re.search(r'\{(.*)\}', s)
     search_square = re.search(r'\[(.*)\]', s)
     license = ""
-    replace_string = '{year} {name}'.format(year=date.today().year, name='Archit Verma')
+    replace_string = '{year} {name}'.format(year=date.today().year, name=_get_config_name())
 
     if search_curly:
       license = re.sub(r'\{(.+)\}', replace_string, s)
@@ -114,9 +129,6 @@ def get_license_summary(license_code):
 
 def main():
   ''' butler helps you manage and add license from the command line '''
-	
-  # for license in _LICENCES.keys():
-  #   _get_license_description(license)
 
   arguments = docopt(__doc__, version=__version__)
   if arguments['ls'] or arguments['list']:
