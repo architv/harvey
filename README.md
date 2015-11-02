@@ -13,7 +13,7 @@ Harvey is a command line legal expert who manages license for you.
 ## Features
 
 - Written in Python
-- Supports all Github-supported [`licenses`](https://github.com/architv/harvey#list-all-licenses)
+- Supports all Github-supported [`licenses`](https://github.com/architv/harvey#list-of-supported-licenses)
 - Works on Mac, Linux (haven't tested on windows)
 
 ## Installation
