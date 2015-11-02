@@ -1,11 +1,11 @@
 r"""
-butler generates license  from the command line for you
+harvey generates license  from the command line for you
 Usage:
-  butler (ls | list)
-  butler <NAME> --tldr
-  butler <NAME>
-  butler (-h | --help)
-  butler --version
+  harvey (ls | list)
+  harvey <NAME> --tldr
+  harvey <NAME>
+  harvey (-h | --help)
+  harvey --version
 Options:
   -h --help     Show this screen.
   --version     Show version.
@@ -128,7 +128,7 @@ def get_license_summary(license_code):
 
 
 def main():
-  ''' butler helps you manage and add license from the command line '''
+  ''' harvey helps you manage and add license from the command line '''
 
   arguments = docopt(__doc__, version=__version__)
   if arguments['ls'] or arguments['list']:
