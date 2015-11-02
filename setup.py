@@ -12,7 +12,7 @@ if os.environ.get('USER','') == 'vagrant':
 
 setup(
   name='harvey',
-  version='0.0.4.2',
+  version='0.0.4.3',
   description='harvey helps you manage and choose license from command line',
   long_description=open('README.rst').read(),
   author='Archit Verma',
