@@ -2,4 +2,6 @@ Harvey
 =====
 ![](http://i.imgur.com/raSkNrr.png?1)
 
-Harvey is your command line helper for viewing and choosing licenses
+image: http://www.buylocalexperts.com/sanantonio/images/stories/buy-local-legal-expert.png
+
+Harvey is a command line legal expert who manages license for you.

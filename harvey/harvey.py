@@ -84,6 +84,7 @@ def _get_license_description(license_code):
   else:
     print(Fore.RED + 'No such license. Please check again.'), 
     print(Style.RESET_ALL),
+    sys.exit()
 
 
 def get_license_summary(license_code):
