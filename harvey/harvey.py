@@ -25,14 +25,18 @@ from docopt import docopt
 
 requests.packages.urllib3.disable_warnings()
 
-__version__ = '0.0.1'
+__version__ = '0.0.4.1'
 
 BASE_URL = "https://api.github.com"
 _HEADERS = {'Accept': 'application/vnd.github.drax-preview+json'}
-_LICENCES = {}
+_LICENSES = {}
+_ROOT = os.path.abspath(os.path.dirname(__file__))
 
-with open('licenses.json', 'r') as f:
-  _LICENCES = json.loads(f.read())
+filename = "licenses.json"
+abs_file = os.path.join(_ROOT, filename)
+
+with open(abs_file, 'r') as f:
+  _LICENSES = json.loads(f.read())
 
 
 def _stripslashes(s):
@@ -51,12 +55,10 @@ def _get_config_name():
 
 def _get_licences():
   """ lists all the licenses on command line """
-  licenses = {}
-  with open('licenses.json', 'r') as f:
-    licenses = json.loads(f.read())
+  licenses = _LICENSES
   
-    for license in licenses:
-      print("{license_name} [{license_code}]").format(license_name=licenses[license], license_code=license)
+  for license in licenses:
+    print("{license_name} [{license_code}]").format(license_name=licenses[license], license_code=license)
 
 
 def _get_license_description(license_code):
@@ -87,7 +89,8 @@ def _get_license_description(license_code):
 def get_license_summary(license_code):
   """ Gets the license summary and permitted, forbidden and required behavouir """
   try:
-    with open('summary.json', 'r') as f:
+    abs_file = os.path.join(_ROOT, "summary.json")
+    with open(abs_file, 'r') as f:
       summary_license = json.loads(f.read())[license_code]
     
     # prints summary
