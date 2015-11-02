@@ -6,12 +6,14 @@ Image: [buylocalexperts.com](http://www.buylocalexperts.com/sanantonio/images/st
 
 Harvey is a command line legal expert who manages license for you.
 
+## Demo
+
 ![](http://i.imgur.com/gEKlzfv.gif?1)
 
 ## Features
 
 - Written in Python
-- Supports all Github-supported [`licenses`](https://github.com/karan/joearchitv/harvey#List-all-licenses)
+- Supports all Github-supported [`licenses`](https://github.com/architv/harvey#List-all-licenses)
 - Works on Mac, Linux (haven't tested on windows)
 
 ## Installation
