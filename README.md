@@ -2,8 +2,6 @@ Harvey
 =====
 ![](http://i.imgur.com/raSkNrr.png?1)
 
-Image: [buylocalexperts.com](http://www.buylocalexperts.com/sanantonio/images/stories/buy-local-legal-expert.png)
-
 Harvey is a command line legal expert who manages license for you.
 
 ## Demo
@@ -108,3 +106,5 @@ $ python harvey/harvey.py mit
 Licence
 ====
 Open sourced under [MIT License](LICENSE) (Created by harvey)
+
+Image: [buylocalexperts.com](http://www.buylocalexperts.com/sanantonio/images/stories/buy-local-legal-expert.png)
