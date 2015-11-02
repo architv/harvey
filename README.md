@@ -84,7 +84,7 @@ $ harvey --help
 * BSD 2-clause "Simplified" License [bsd-2-clause]
 * MIT License [mit]
 
-## FAQ
+## FAQ's
 
 #### How is this any better than [choose a license](http://choosealicense.com/licenses/) and [tldr leagal](https://tldrlegal.com/)?
 
@@ -95,6 +95,10 @@ harvey apache-2.0 > LICENSE
 will add the apache license in your project, with your user name, which you have setup in your `git config` settings
 
 * Yes, [choose a license](http://choosealicense.com/licenses/) also allows you to select a license. But since this is a CLI app, you can choose the license without breaking your workflow. Thus, it saves you time by not having to switch over to the browser.
+
+#### Still, it seems really unnecessary
+
+Apart from what I have mentioned above, I wouldn't go as far as saying that harvey is absolutely essential to manage license for your open source project. I felt the need for the app because every time I had to add a license to my project I had to head over to the browser for a license template. So, I created harvey to allow me to add a license without breaking my workflow.
 
 
 ## Contributing
