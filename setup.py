@@ -12,7 +12,7 @@ if os.environ.get('USER','') == 'vagrant':
 
 setup(
   name='harvey',
-  version='0.0.1',
+  version='0.0.2',
   description='harvey helps you manage and choose license from command line',
   long_description=open('README.rst').read(),
   author='Archit Verma',
@@ -20,6 +20,7 @@ setup(
   license='MIT',
   keywords=['license', 'legal', 'github', 'command line', 'cli'],
   url='https://github.com/architv/harvey',
+  packages=['harvey'],
   install_requires=[
     'docopt>=0.6.2',
     'requests==2.8.0',
@@ -27,7 +28,7 @@ setup(
   ],
   entry_points={
     'console_scripts': [
-      'harvey=harvey.harvey:main'
+      'harvey = harvey.harvey:main'
     ],
   }
 )
