@@ -2,7 +2,7 @@ harvey
 =====
 ![](http://i.imgur.com/raSkNrr.png?1)
 
-Harvey is a command line legal expert who manages license for you.
+Harvey is a command line legal expert who manages license for your open source project.
 
 ## Demo
 
