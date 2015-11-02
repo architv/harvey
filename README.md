@@ -95,3 +95,7 @@ $ pip install requirements.txt
 $ cd harvey/
 $ python harvey/harvey.py mit
 ```
+
+Licence
+====
+Open sourced under [MIT License](LICENSE) (Created by harvey)
