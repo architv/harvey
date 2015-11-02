@@ -1,4 +1,4 @@
-Butler
+Harvey
 =====
 
-Butler is your command line helper for viewing and choosing licenses
+Harvey is your command line helper for viewing and choosing licenses
