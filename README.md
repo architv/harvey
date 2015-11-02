@@ -84,6 +84,10 @@ $ harvey --help
 * BSD 2-clause "Simplified" License [bsd-2-clause]
 * MIT License [mit]
 
+## FAQ
+
+### How is this any better than [choose a license](http://choosealicense.com/licenses/) and [tldr leagal](https://tldrlegal.com/)?
+
 
 ## Contributing
 
