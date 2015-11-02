@@ -1,5 +1,7 @@
 r"""
-harvey generates license  from the command line for you
+
+Harvey is a command line legal expert who manages license for you.
+
 Usage:
   harvey (ls | list)
   harvey <NAME> --tldr
@@ -9,6 +11,7 @@ Usage:
 Options:
   -h --help     Show this screen.
   --version     Show version.
+
 """
 
 
@@ -133,8 +136,8 @@ def get_license_summary(license_code):
 
 def main():
   ''' harvey helps you manage and add license from the command line '''
-
   arguments = docopt(__doc__, version=__version__)
+
   if arguments['ls'] or arguments['list']:
     _get_licences()
   elif arguments['--tldr'] and arguments['<NAME>']:

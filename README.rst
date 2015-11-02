@@ -1,4 +1,4 @@
 Harvey
 =====
 
-Harvey is your command line helper for viewing and choosing licenses
+Harvey is a command line legal expert who manages license for you.
