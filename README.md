@@ -86,7 +86,15 @@ $ harvey --help
 
 ## FAQ
 
-### How is this any better than [choose a license](http://choosealicense.com/licenses/) and [tldr leagal](https://tldrlegal.com/)?
+#### How is this any better than [choose a license](http://choosealicense.com/licenses/) and [tldr leagal](https://tldrlegal.com/)?
+
+* Harvey doesn't only let you select a license, it also helps you to add it to your project. So, doing something like:
+```bash
+harvey apache-2.0 > LICENSE
+```
+will add the apache license in your project, with your user name, which you have setup in your `git config` settings
+
+* Yes, [choose a license](http://choosealicense.com/licenses/) also allows you to select a license. But since this is a CLI app, you can choose the license without breaking your workflow. Thus, it saves you time by not having to switch over to the browser.
 
 
 ## Contributing
