@@ -14,7 +14,7 @@ Harvey is a command line legal expert who manages license for your open source p
 
 - Written in Python
 - Supports all Github-supported [`licenses`](https://github.com/architv/harvey#list-of-supported-licenses)
-- Works on Mac, Linux (haven't tested on windows)
+- Works on Mac, Linux, Windows
 
 ## Installation
 
@@ -32,6 +32,10 @@ $ git clone git@github.com:architv/harvey.git
 $ cd harvey/
 $ python setup.py install
 ```
+
+####Note:
+
+Windows users might need to install [ansicon](https://github.com/adoxa/ansicon) for colorama to work correctly
 
 ## Usage
 
