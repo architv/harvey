@@ -98,7 +98,7 @@ $ harvey --help
 
 ## FAQ's
 
-#### How is this any better than [choose a license](http://choosealicense.com/licenses/) and [tldr leagal](https://tldrlegal.com/)?
+#### How is this any better than [choose a license](http://choosealicense.com/licenses/) and [tldr legal](https://tldrlegal.com/)?
 
 * Harvey doesn't only let you select a license, it also helps you to add it to your project. So, doing something like:
 ```bash
