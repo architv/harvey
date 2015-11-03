@@ -6,6 +6,7 @@ Usage:
   harvey (ls | list)
   harvey <NAME> --tldr
   harvey <NAME>
+  harvey <NAME> --export
   harvey (-h | --help)
   harvey --version
 Options:
@@ -132,6 +133,16 @@ def get_license_summary(license_code):
   except KeyError:
     print(Fore.RED + 'No such license. Please check again.'), 
     print(Style.RESET_ALL),
+	
+
+def save_license(license_code):
+  """ Grab license, save to LICENSE/LICENSE.txt file. """
+  desc = _get_license_description(license_code)
+  fname = "LICENSE"
+  if sys.platform == "win32":
+    fname += ".txt"  # Windows and file exts
+  with open(os.path.join(os.getcwd(), fname), "w") as afile:
+    afile.write(desc)
 
 
 def main():
@@ -142,6 +153,8 @@ def main():
     _get_licences()
   elif arguments['--tldr'] and arguments['<NAME>']:
     get_license_summary(arguments['<NAME>'])
+  elif arguments['--export'] and arguments['<NAME>']:
+    save_license(arguments['<NAME>'])
   elif arguments['<NAME>']:
     print(_get_license_description(arguments['<NAME>']))
   else:
