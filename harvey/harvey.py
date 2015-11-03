@@ -44,7 +44,7 @@ with open(abs_file, 'r') as f:
 
 
 def _stripslashes(s):
-  '''removes trailing and leading backslashes from string'''
+  '''Removes trailing and leading backslashes from string'''
   r = re.sub(r"\\(n|r)", "\n", s)
   r = re.sub(r"\\", "", r)
   return r
@@ -58,7 +58,7 @@ def _get_config_name():
 
 
 def _get_licences():
-  """ lists all the licenses on command line """
+  """ Lists all the licenses on command line """
   licenses = _LICENSES
   
   for license in licenses:
@@ -92,7 +92,7 @@ def _get_license_description(license_code):
 
 
 def get_license_summary(license_code):
-  """ Gets the license summary and permitted, forbidden and required behavouir """
+  """ Gets the license summary and permitted, forbidden and required behaviour """
   try:
     abs_file = os.path.join(_ROOT, "summary.json")
     with open(abs_file, 'r') as f:
@@ -136,7 +136,7 @@ def get_license_summary(license_code):
 	
 
 def save_license(license_code):
-  """ Grab license, save to LICENSE/LICENSE.txt file. """
+  """ Grab license, save to LICENSE/LICENSE.txt file """
   desc = _get_license_description(license_code)
   fname = "LICENSE"
   if sys.platform == "win32":
@@ -152,11 +152,11 @@ def main():
   if arguments['ls'] or arguments['list']:
     _get_licences()
   elif arguments['--tldr'] and arguments['<NAME>']:
-    get_license_summary(arguments['<NAME>'])
+    get_license_summary(arguments['<NAME>'].lower())
   elif arguments['--export'] and arguments['<NAME>']:
-    save_license(arguments['<NAME>'])
+    save_license(arguments['<NAME>'].lower())
   elif arguments['<NAME>']:
-    print(_get_license_description(arguments['<NAME>']))
+    print(_get_license_description(arguments['<NAME>'].lower()))
   else:
     print(__doc__)
   
