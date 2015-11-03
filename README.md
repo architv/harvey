@@ -52,6 +52,12 @@ $ harvey mit    # outputs mit license to stdout
 $ harvey mit > LICENSE   # saves a new mit LICENSE file
 ```
 
+OR
+
+```bash
+$ harvey --export mit   # saves a new mit LICENSE file
+```
+
 
 ### List all licenses
 
