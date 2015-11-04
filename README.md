@@ -35,7 +35,7 @@ $ python setup.py install
 
 ####Note:
 
-Windows users might need to install [ansicon](https://github.com/adoxa/ansicon) for colorama to work correctly
+Windows users might need to install [ansicon](https://github.com/adoxa/ansicon) for colorama to work correctly.
 
 ## Usage
 
