@@ -15,9 +15,10 @@ with open('licences_tldr.json', 'r') as f:
 def get_summary(content):
   """Gets the summary of a license from tldrlegal.com"""
   soup = BeautifulSoup(content, "html.parser")
-  summary = soup.find_all(attrs={'class': re.compile(r".*\bsummary-content\b.*")})
+  summary = soup.find_all(attrs={
+      'class': re.compile(r".*\bsummary-content\b.*")})
 
-  if summary[0].p.string == None:
+  if summary[0].p.string is None:
     return summary[0].p.p.getText()
   return summary[0].p.getText()
 
@@ -28,8 +29,8 @@ def get_rules(license):
   can = []
   cannot = []
   must = []
-  req = requests.get("{base_url}/licenses/{license}".format(base_url=BASE_URL, license=license), 
-    headers=_HEADERS)
+  req = requests.get("{base_url}/licenses/{license}".format(
+                     base_url=BASE_URL, license=license), headers=_HEADERS)
 
   if req.status_code == requests.codes.ok:
     data = req.json()
@@ -54,11 +55,11 @@ def main():
       can, cannot, must = get_rules(license)
 
       all_summary[license] = {
-        "summary": summary,
-        "source": RESOURCES[license],
-        "can": can,
-        "cannot": cannot,
-        "must": must
+          "summary": summary,
+          "source": RESOURCES[license],
+          "can": can,
+          "cannot": cannot,
+          "must": must
       }
 
   with open('summary.json', 'w+') as f:
