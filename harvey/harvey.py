@@ -29,7 +29,7 @@ from docopt import docopt
 
 requests.packages.urllib3.disable_warnings()
 
-__version__ = '0.0.4.4'
+__version__ = '0.0.5'
 
 BASE_URL = "https://api.github.com"
 _HEADERS = {'Accept': 'application/vnd.github.drax-preview+json'}
