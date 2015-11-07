@@ -26,7 +26,7 @@ setup(
     },
     install_requires=[
         'docopt>=0.6.2',
-        'requests==2.8.0',
+        'requests>=2.8.0',
         'colorama==0.3.3'
     ],
     entry_points={
